@@ -6,6 +6,9 @@ class Fixnum
     dime = 10
     quarter = 25
 
+    # max_quarters = 3
+
+
     penny_Counter = 0
     nickel_Counter = 0
     dime_Counter = 0
@@ -15,6 +18,13 @@ class Fixnum
       quarter_Counter += 1
       total_coins = total_coins - quarter
     end
+    # if there is a quarter maximum
+    # if quarter_Counter > max_quarters #2
+    #   until quarter_Counter == max_quarters do
+    #     quarter_Counter -= 1
+    #     total_coins += 25
+    #   end
+    # end
 
     until total_coins < 10 do
       dime_Counter += 1
@@ -34,3 +44,5 @@ class Fixnum
     "#{quarter_Counter} quarters, #{dime_Counter} dimes, #{nickel_Counter} nickels, #{penny_Counter} pennies"
   end
 end
+
+puts 100.coin_combination()
